@@ -58,13 +58,29 @@
 			children = (
 				94B53F672C55BB2B00EEC035 /* AppDelegate.swift */,
 				94B53F692C55BB2B00EEC035 /* SceneDelegate.swift */,
-				94B53F6B2C55BB2B00EEC035 /* ViewController.swift */,
-				94B53F6D2C55BB2B00EEC035 /* Main.storyboard */,
+				94B53F7B2C55BB4400EEC035 /* View */,
+				94B53F7C2C55BB4D00EEC035 /* Controller */,
 				94B53F702C55BB2D00EEC035 /* Assets.xcassets */,
 				94B53F722C55BB2D00EEC035 /* LaunchScreen.storyboard */,
 				94B53F752C55BB2D00EEC035 /* Info.plist */,
 			);
 			path = "BMI Calculator";
+			sourceTree = "<group>";
+		};
+		94B53F7B2C55BB4400EEC035 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				94B53F6D2C55BB2B00EEC035 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		94B53F7C2C55BB4D00EEC035 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				94B53F6B2C55BB2B00EEC035 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +316,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -328,6 +345,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
