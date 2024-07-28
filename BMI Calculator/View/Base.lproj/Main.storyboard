@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -45,8 +44,11 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="i5A-yX-AWD">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="183" minValue="70" maxValue="220" translatesAutoresizingMaskIntoConstraints="NO" id="i5A-yX-AWD">
                                                 <rect key="frame" x="-2" y="35" width="386" height="31"/>
+                                                <connections>
+                                                    <action selector="heightChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="kFR-HK-jiR"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                         <constraints>
@@ -76,8 +78,11 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="sFP-xa-NZn">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="90" minValue="30" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="sFP-xa-NZn">
                                                 <rect key="frame" x="-2" y="35" width="386" height="31"/>
+                                                <connections>
+                                                    <action selector="weightChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="HQm-mN-wAv"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                         <constraints>
@@ -89,17 +94,21 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vke-ay-JE7">
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vke-ay-JE7">
                                 <rect key="frame" x="16" y="786" width="382" height="60"/>
-                                <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="UXv-a1-fD1"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Calculate BMI">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
+                                <state key="normal" title="Calculate BMI"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Calculate BMI" cornerStyle="fixed">
+                                    <backgroundConfiguration key="background" cornerRadius="10"/>
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="15"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="calculatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NqD-aK-Eov"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -119,6 +128,12 @@
                             <constraint firstItem="qpc-aM-PTo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v4F-Va-Dqk"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="height" destination="Lgj-ha-nOl" id="TBW-z7-dhc"/>
+                        <outlet property="heightSlider" destination="i5A-yX-AWD" id="Qp2-X6-39S"/>
+                        <outlet property="weight" destination="R1u-x7-RAO" id="shd-Zc-VHs"/>
+                        <outlet property="weightSlider" destination="sFP-xa-NZn" id="8AU-Yq-iq7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -155,17 +170,18 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="av9-4E-rCB">
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="av9-4E-rCB">
                                 <rect key="frame" x="16" y="786" width="382" height="60"/>
-                                <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="bDi-Fd-bG9"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Recalculate">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
+                                <state key="normal" title="Recalculate"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Recalculate" cornerStyle="fixed">
+                                    <backgroundConfiguration key="background" cornerRadius="10"/>
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="15"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TcF-f9-78X"/>
@@ -187,12 +203,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jmO-ss-II5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="876.81159420289862" y="-35.491071428571423"/>
+            <point key="canvasLocation" x="768" y="-35"/>
         </scene>
     </scenes>
-    <resources>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-    </resources>
 </document>
