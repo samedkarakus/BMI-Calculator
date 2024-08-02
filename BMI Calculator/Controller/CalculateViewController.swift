@@ -7,7 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CalculateViewController: UIViewController {
+    
+    var calculatorBrain = CalculatorBrain()
 
     @IBOutlet weak var height: UILabel!
     @IBOutlet weak var weight: UILabel!
@@ -28,19 +30,23 @@ class ViewController: UIViewController {
         weight.text = "\(weightValue) kg"
     }
     
-    @IBAction func calculatePressed(_ sender: UIButton) {
-        print(Int(heightSlider.value))
-        print(String(format: "%.2f", roundNearestHalf(weightSlider.value)))
-        print(BMICalculation(heightSlider.value, weightSlider.value))
-    }
-    
-    func BMICalculation(_ height: Float, _ weight: Float) -> String {
-        let heightInMeters = height / 100
-        let bmi = weight / (heightInMeters * heightInMeters)
-        return String(format: "%.1f", bmi)
-    }
-    
     func roundNearestHalf(_ value: Float) -> Float {
         return round(value * 2.0) / 2.0
     }
+    
+    @IBAction func calculatePressed(_ sender: UIButton) {
+        print(Int(heightSlider.value))
+        print(String(format: "%.2f", roundNearestHalf(weightSlider.value)))
+        print(calculatorBrain.calculateBMI(heightSlider.value, weightSlider.value))
+        
+        self.performSegue(withIdentifier: "goToResult", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToResult" {
+            let destinationVC = segue.destination as! ResultViewController
+            destinationVC.bmiValue = calculatorBrain.getBMIValue()
+        }
+    }
+    
 }
