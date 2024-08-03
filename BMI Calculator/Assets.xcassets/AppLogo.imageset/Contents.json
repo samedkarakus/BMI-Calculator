@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "logonpg.png",
+      "filename" : "bmiLogo.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "logonpg@2x.png",
+      "filename" : "bmiLogo@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "logonpg@3x.png",
+      "filename" : "bmiLogo@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
