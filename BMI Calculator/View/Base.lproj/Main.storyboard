@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -141,9 +142,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4G-DV-RQk">
-                                <rect key="frame" x="16" y="16" width="382" height="20.5"/>
+                                <rect key="frame" x="16" y="32" width="382" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="B4W-cY-1bX">
@@ -155,10 +156,10 @@
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eat some snacks!!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Wg-nE-nuq">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eat some snacks!!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Wg-nE-nuq">
                                         <rect key="frame" x="0.0" y="90" width="382" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" systemColor="opaqueSeparatorColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -190,7 +191,7 @@
                             <constraint firstItem="TcF-f9-78X" firstAttribute="trailing" secondItem="i4G-DV-RQk" secondAttribute="trailing" constant="16" id="PIc-cG-Sh6"/>
                             <constraint firstItem="av9-4E-rCB" firstAttribute="leading" secondItem="TcF-f9-78X" secondAttribute="leading" constant="32" id="XqA-Gg-BYy"/>
                             <constraint firstItem="B4W-cY-1bX" firstAttribute="centerY" secondItem="kND-nZ-OY6" secondAttribute="centerY" id="Z8g-5e-TJU"/>
-                            <constraint firstItem="i4G-DV-RQk" firstAttribute="top" secondItem="TcF-f9-78X" secondAttribute="top" constant="16" id="jd9-xS-DPS"/>
+                            <constraint firstItem="i4G-DV-RQk" firstAttribute="top" secondItem="TcF-f9-78X" secondAttribute="top" constant="32" id="jd9-xS-DPS"/>
                             <constraint firstItem="B4W-cY-1bX" firstAttribute="centerX" secondItem="kND-nZ-OY6" secondAttribute="centerX" id="l0O-ZI-K28"/>
                             <constraint firstItem="TcF-f9-78X" firstAttribute="trailing" secondItem="av9-4E-rCB" secondAttribute="trailing" constant="32" id="wVl-s3-Hs0"/>
                             <constraint firstItem="i4G-DV-RQk" firstAttribute="leading" secondItem="TcF-f9-78X" secondAttribute="leading" constant="16" id="yrF-JQ-rpR"/>
@@ -206,4 +207,9 @@
             <point key="canvasLocation" x="886" y="-35"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
